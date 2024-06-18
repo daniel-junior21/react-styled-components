@@ -13,7 +13,6 @@ const StyledListItem = styled.li`
 `
 
 const NavItem = ({children, inactiveIcon, activeIcon, active = false}) => {
-    console.log(active)
     return (
         <StyledListItem $active={active}>
             <img src={active ? activeIcon : inactiveIcon} alt="nav-icon" />

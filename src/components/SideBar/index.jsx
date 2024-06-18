@@ -26,15 +26,24 @@ const SideBar = () => {
                     >
                         Most Viewed
                     </NavItem>
-                    {/* <NavItem>
-                        <StyledLink href="">Most Liked</StyledLink>
+                    <NavItem
+                        activeIcon="/icons/most-liked.png"
+                        inactiveIcon="/icons/most-liked-inactive.png"
+                    >
+                        Most Liked
                     </NavItem>
-                    <NavItem>
-                        <StyledLink href="">Recents</StyledLink>
+                    <NavItem
+                        activeIcon="/icons/recents.png"
+                        inactiveIcon="/icons/recents-inactive.png"
+                    >
+                        Recents
                     </NavItem>
-                    <NavItem>
-                        <StyledLink href="">Surprise me</StyledLink>
-                    </NavItem> */}
+                    <NavItem
+                        activeIcon="/icons/surprise-me.png"
+                        inactiveIcon="/icons/surprise-me-inactive.png"
+                    >
+                        Surprise me
+                    </NavItem>
                 </StyledList>
             </nav>
         </aside>
