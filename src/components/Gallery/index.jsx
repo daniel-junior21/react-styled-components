@@ -12,21 +12,29 @@ const GallerySection = styled.section`
     flex-grow: 1;
 `;
 
-const Gallery = ({images = [], selectImage, toggleFav}) => {
+const ImageSection = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+`
+
+const Gallery = ({images = [], selectImage, toggleFav, setTag}) => {
     return (
         <>
-            <Tags />
+            <Tags setTag={setTag} />
             <GalleryContainer>
                 <GallerySection>
                     <Title>Browse the gallery</Title>
-                    {images.map(image => 
-                        <Image 
-                            zoomImage={selectImage}
-                            toggleFav={toggleFav}
-                            key={image.id} 
-                            image={image} 
-                        />
-                    )}
+                    <ImageSection>
+                        {images.map(image => 
+                            <Image 
+                                zoomImage={selectImage}
+                                toggleFav={toggleFav}
+                                key={image.id} 
+                                image={image} 
+                            />
+                        )}
+                    </ImageSection>
                 </GallerySection>
                 <Popular />
             </GalleryContainer>

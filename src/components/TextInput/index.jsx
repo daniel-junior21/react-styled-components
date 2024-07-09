@@ -28,10 +28,14 @@ width: 38px;
 height: 38px;
 `;
 
-const TextInput = () => {
+const TextInput = ({setFilter}) => {
     return (
         <StyledContainer>
-            <StyledInput placeholder="What would you like to find?"/>
+            <StyledInput 
+                type="text" 
+                onChange={(event) => {setFilter(event.target.value)}} 
+                placeholder="What would you like to find?"
+            />
             <SearchIcon src="/images/search.png" alt="search-icon" />
         </StyledContainer>
     );
